@@ -16,5 +16,6 @@ defmodule LocalerWeb.Router do
 
   scope "/api", LocalerWeb do
     pipe_through :api
+    resources "/messages", MessageController #, except: [:new, :edit]
   end
 end
