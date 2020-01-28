@@ -13,6 +13,7 @@ defmodule LocalerWeb.MessageView do
   def render("message.json", %{message: message}) do
     %{id: message.id,
       latitude: message.latitude,
-      longitude: message.longitude}
+      longitude: message.longitude,
+      description: message.description}
   end
 end

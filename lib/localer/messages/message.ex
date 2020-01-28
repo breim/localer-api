@@ -3,6 +3,7 @@ defmodule Localer.Messages.Message do
   import Ecto.Changeset
 
   schema "messages" do
+    field :description, :string
     field :latitude, :decimal
     field :longitude, :decimal
 
@@ -12,7 +13,7 @@ defmodule Localer.Messages.Message do
   @doc false
   def changeset(message, attrs) do
     message
-    |> cast(attrs, [:latitude, :longitude])
-    |> validate_required([:latitude, :longitude])
+    |> cast(attrs, [:description, :latitude, :longitude])
+    |> validate_required([:description, :latitude, :longitude])
   end
 end
